@@ -1,7 +1,7 @@
-import sys
-from zip.zip_processor import *
-from zip.zip_replace import *
+from zip_processor import *
 
-zipreplace = ZipReplace("test_document.zip", 'rr', 'ss')
-zipprocessor = ZipProcessor("test_document.zip")
-zipprocessor.process_zip()
+zip_process = ZipProcessor("test_document.zip", ZipReplace("rr", "dd"))
+zip_process.process_zip()
+
+zip_process = ZipProcessor("imagry.zip", ScaleZip((600, 400)))
+zip_process.process_zip()
